@@ -1,4 +1,4 @@
-＃＃ （1）PERT/CPM圖
+## （1）PERT/CPM圖
 ``` mermaid
 graph TD
     T1[1 研擬計畫]
@@ -27,25 +27,34 @@ graph TD
     T10 --> T11
 ```
 ---
- ＃＃ （2）甘特圖
+## （2）甘特圖
 ``` mermaid
 gantt
     title 專案甘特圖
-    dateFormat  D
-    section 規劃
-    研擬計畫        :done,  des1, 1, 1d
-    任務分配        :done,  des2, 2, 4d
-    section 設備與程式
-    取得硬體        :done,  des3, 2, 17d
-    程式開發        :active,des4, 6, 70d
-    安裝硬體        :         des5, 19, 10d
-    section 測試、手冊
-    程式測試        :         des6, 76, 30d
-    撰寫使用手冊    :         des7, 29, 25d
-    轉換檔案        :         des8, 29, 20d
-    section 訓練與驗收
-    系統測試        :         des9, 106, 25d
-    使用者訓練      :         des10, 54, 20d
-    使用者測試      :         des11, 131, 25d
+    dateFormat YYYY-MM-DD
+    section 計畫
+    研擬計畫 : done, a1, 2025-01-01, 1d 
+    任務分配 : done, a2, after a1, 4d
+
+
+    section 硬體
+    取得硬體 : a3, after a2, 17d 
+    安裝硬體 : a5, after a3, 10d
+
+
+    section 軟體
+    程式開發 :a4, after a2, 70d
+    程式測試 :a6, after a4, 30d
+ 
+    section 文件與轉換
+    撰寫使用手冊  : a7,after a4,25d
+    轉換檔案     : a8,after a4,20d
+
+    section 測試與訓練
+    系統測試 : a9, after a5 аб, 25d
+    使用者訓練 :a10,after a7 a8, 20d
+    使用者測試 :a11, after a9 a10, 25d
 
 ```
+## （3）關鍵路徑
+    1（研擬計畫） → 2（任務分配） → 4（程式開發） → 6（程式測試） → 9（系統測試） → 11（使用者測試）
