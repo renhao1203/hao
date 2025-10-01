@@ -33,18 +33,19 @@ gantt
     title 專案甘特圖
     dateFormat  D
     section 規劃
-    研擬計畫        :done, T1, 1, 1d
-    任務分配        :done, T2, 2, 4d
+    研擬計畫        :done,  des1, 1, 1d
+    任務分配        :done,  des2, 2, 4d
     section 設備與程式
-    取得硬體        :done, T3, 2, 17d
-    程式開發        :active, T4, 6, 70d
-    安裝硬體        :T5, 19, 10d
+    取得硬體        :done,  des3, 2, 17d
+    程式開發        :active,des4, 6, 70d
+    安裝硬體        :         des5, 19, 10d
     section 測試、手冊
-    程式測試        :T6, 76, 30d
-    撰寫使用手冊    :T7, 29, 25d
-    轉換檔案        :T8, 29, 20d
+    程式測試        :         des6, 76, 30d
+    撰寫使用手冊    :         des7, 29, 25d
+    轉換檔案        :         des8, 29, 20d
     section 訓練與驗收
-    系統測試        :T9, 106, 25d
-    使用者訓練      :T10, 54, 20d
-    使用者測試      :T11, 131, 25d
+    系統測試        :         des9, 106, 25d
+    使用者訓練      :         des10, 54, 20d
+    使用者測試      :         des11, 131, 25d
+
 ```
